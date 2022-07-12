@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from flask_cors import CORS
 from flask_restful import Resource, Api, reqparse
 import pandas as pd
 import ast
@@ -16,14 +17,14 @@ class Users(Resource):
     def get(self):
         data = pd.read_csv('./user.csv')  # read CSV
         data = data.to_dict()  # convert dataframe to dictionary
-        return {'data': data}, 200  # return data and 200 OK code
+        return {'data': data}, 200, {'Access-Control-Allow-Origin': '*'}  # return data and 200 OK code
 
 class Locations(Resource):
     # methods go here
     def get(self):
         data = pd.read_csv('./location.csv')  # read CSV
         data = data.to_dict()  # convert dataframe to dictionary
-        return {'data': data}, 200  # return data and 200 OK code
+        return {'data': data}, 200, {'Access-Control-Allow-Origin': '*'}   # return data and 200 OK code
 
 api.add_resource(Users, '/users')  # '/users' is our entry point
 api.add_resource(Locations, '/locations')  # '/locations' is our entry point

@@ -1,0 +1,12 @@
+FROM node:16
+
+WORKDIR /usr/src/frontend
+
+COPY ./front-end/package-lock.json .
+COPY ./front-end/package.json .
+RUN npm install
+
+COPY ./front-end/public ./public
+COPY ./front-end/src ./src
+
+CMD [ "npm", "run" , "start" ]

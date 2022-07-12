@@ -1,12 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Person from './Person.js';
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         Hello World!
-      </header>
+      </div>
+
+      <Person />
     </div>
   );
 }

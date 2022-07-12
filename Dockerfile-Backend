@@ -2,9 +2,7 @@ FROM python:3
 
 WORKDIR /usr/src/backend
 
-COPY . .
+COPY ./back-end .
 RUN pip install --no-cache-dir -r requirements.txt
-
-COPY backend.py .
 
 CMD [ "python", "./backend.py" ]

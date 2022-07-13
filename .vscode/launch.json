@@ -5,7 +5,12 @@
 			"type": "python",
 			"request": "attach",
 			"connect": {"host": "localhost", "port": 5678},
-			"pathMappings": [{"localRoot": "${workspaceFolder}", "remoteRoot": "."}],
+			"pathMappings": [
+				{
+					"localRoot": "${workspaceFolder}/back-end",
+					"remoteRoot": "/usr/src/backend"
+				}
+			],
 			"justMyCode": true
 		},
 		{

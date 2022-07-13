@@ -10,14 +10,14 @@ export default class Person extends React.Component {
 
     componentDidMount() {
         axios.get('http://localhost:5000/users').then(res => {
-            console.log(res.data);
+            this.person = res.data.data;
         })
     }
 
     render() {
         return (
             <div className="App-header2">
-                "Person No help"
+                Random Person is: {this.person[Math.random() * 5]}
             </div>
         )
     }

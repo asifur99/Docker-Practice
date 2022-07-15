@@ -11,3 +11,8 @@ Docker Practice to maintain and run full stack app in Docker
 
 `docker run -d -p 5678:5678 -p 5000:5000 dockerpractice backend` <br/>
 `docker run -d -p 5678:5678 -p 5000:5000 dockerpractice:debug backend`
+
+## Changes
+DockerFile
+Docker-Compose
+Launch.json
